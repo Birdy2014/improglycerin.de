@@ -1,0 +1,60 @@
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    font-size: 25px;
+    content: "\f0c9";
+  }
+}
+
+.list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: white;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: height linear 0.1s;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  padding: 10px 7.5px;
+
+  &:hover {
+    color: var(--color-accent);
+  }
+}
+
+@media (width > 1050px) {
+  .button {
+    display: none;
+  }
+
+  .list {
+    display: flex !important;
+    flex-direction: row;
+    position: static;
+    height: auto !important;
+  }
+
+  .link {
+    padding: 20px 7.5px;
+  }
+}
