@@ -18,28 +18,32 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className={styles.header}>
-      <a href="#">
-        <img src="/logo.svg" alt="Improglycerin Logo" />
-      </a>
-      <nav>
-        <button
-          className={styles.button}
-          onClick={() => setMenuOpen((old) => !old)}
-        ></button>
-        <ul
-          className={styles.list}
-          style={{ height: menuOpen ? "350px" : "0" }}
-        >
-          {routes.map(({ name, href }) => (
-            <li key={name}>
-              <a className={styles.link} href={href}>
-                <span>{name}</span>
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+    <div className={styles["header-container"]}>
+      <div className="center-container">
+        <header className={styles.header}>
+          <a href="#">
+            <img src="/logo.svg" alt="Improglycerin Logo" />
+          </a>
+          <nav>
+            <button
+              className={styles.button}
+              onClick={() => setMenuOpen((old) => !old)}
+            ></button>
+            <ul
+              className={styles.list}
+              style={{ height: menuOpen ? "350px" : "0" }}
+            >
+              {routes.map(({ name, href }) => (
+                <li key={name}>
+                  <a className={styles.link} href={href}>
+                    <span>{name}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        </header>
+      </div>
+    </div>
   );
 }
