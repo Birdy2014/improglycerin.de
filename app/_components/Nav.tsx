@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import styles from "./Nav.module.css";
 
@@ -21,9 +22,9 @@ export default function Nav() {
     <div className={styles["header-container"]}>
       <div className="center-container">
         <header className={styles.header}>
-          <a href="#">
+          <Link href="/">
             <img src="/logo.svg" alt="Improglycerin Logo" />
-          </a>
+          </Link>
           <nav>
             <button
               className={styles.button}
@@ -35,9 +36,9 @@ export default function Nav() {
             >
               {routes.map(({ name, href }) => (
                 <li key={name}>
-                  <a className={styles.link} href={href}>
+                  <Link className={styles.link} href={href}>
                     <span>{name}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
