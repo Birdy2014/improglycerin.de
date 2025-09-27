@@ -1,5 +1,11 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 40px;
+}
+
+.group-vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
 }

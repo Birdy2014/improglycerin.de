@@ -12,7 +12,12 @@ body {
 
 body {
   font-family: Roboto, Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h2 {
+  font-size: 22px;
 }
 
 .center-container {
