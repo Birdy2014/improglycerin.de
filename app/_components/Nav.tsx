@@ -7,8 +7,7 @@ import styles from "./Nav.module.css";
 export default function Nav() {
   const routes = [
     { name: "START", href: "/" },
-    { name: "SHOWS", href: "/shows" },
-    { name: "TICKETS", href: "https://yesticket.org/events/de/improglycerin/" },
+    { name: "SHOWS", href: "https://yesticket.org/events/de/improglycerin/" },
     { name: "NEWS", href: "/news" },
     { name: "ENSEMBLE", href: "/ensemble" },
     { name: "BUSINESS", href: "/business" },

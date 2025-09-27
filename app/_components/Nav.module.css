@@ -5,9 +5,11 @@
   z-index: 10;
   --navbar-logo-height: 80px;
   font-size: 14px;
+  line-height: normal;
 
   & img {
     height: var(--navbar-logo-height);
+    margin-top: 4px;
   }
 }
 
@@ -46,6 +48,8 @@
   flex-direction: column;
   overflow: hidden;
   transition: height linear 0.1s;
+  padding: 0 20px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 .link {
@@ -69,9 +73,11 @@
     flex-direction: row;
     position: static;
     height: auto !important;
+    padding: 0;
+    box-shadow: unset;
   }
 
   .link {
-    padding: 20px 7.5px;
+    padding: 24px 7.5px;
   }
 }
