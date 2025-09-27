@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./Nav.module.css";
 
 export default function Nav() {
@@ -17,34 +17,52 @@ export default function Nav() {
   ];
 
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrollTop, setScrollTop] = useState(true);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const currentScrollTop = window.scrollY === 0;
+      if (currentScrollTop !== scrollTop) {
+        setScrollTop(currentScrollTop);
+      }
+    });
+  });
 
   return (
-    <div className={styles["header-container"]}>
-      <div className="center-container">
-        <header className={styles.header}>
-          <Link href="/">
-            <img src="/logo.svg" alt="Improglycerin Logo" />
-          </Link>
-          <nav>
-            <button
-              className={styles.button}
-              onClick={() => setMenuOpen((old) => !old)}
-            ></button>
-            <ul
-              className={styles.list}
-              style={{ height: menuOpen ? "350px" : "0" }}
-            >
-              {routes.map(({ name, href }) => (
-                <li key={name}>
-                  <Link className={styles.link} href={href}>
-                    <span>{name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </header>
+    <>
+      <div
+        className={`${styles["header-container"]} ${scrollTop ? "" : styles["header-container-scrolled"]}`}
+      >
+        <div className="center-container">
+          <header className={styles.header}>
+            <Link href="/">
+              <img
+                src="https://improglycerin.de/wp-content/uploads/2017/04/improglycerin_logo_website_white_medium_2.jpg"
+                alt="Improglycerin Logo"
+              />
+            </Link>
+            <nav>
+              <button
+                className={styles.button}
+                onClick={() => setMenuOpen((old) => !old)}
+              ></button>
+              <ul
+                className={styles.list}
+                style={{ height: menuOpen ? "fit-content" : "0" }}
+              >
+                {routes.map(({ name, href }) => (
+                  <li key={name}>
+                    <Link className={styles.link} href={href}>
+                      <span>{name}</span>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </header>
+        </div>
       </div>
-    </div>
+      <div style={{ height: "80px" }}></div>
+    </>
   );
 }
