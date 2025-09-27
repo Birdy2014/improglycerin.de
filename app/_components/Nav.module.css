@@ -10,6 +10,7 @@
   & img {
     height: var(--navbar-logo-height);
     margin-top: 4px;
+    transition: height linear 0.1s;
   }
 }
 
