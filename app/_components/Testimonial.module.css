@@ -1,0 +1,25 @@
+.testimonial {
+  --background-color: #d3e5e5;
+}
+
+.quote {
+  background-color: var(--background-color);
+  padding: 25px;
+  position: relative;
+  margin-bottom: 15px;
+
+  &::after {
+    content: "";
+    background-color: var(--background-color);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 35px;
+    bottom: -7px;
+    rotate: 45deg;
+  }
+}
+
+.author {
+  font-weight: bold;
+}
