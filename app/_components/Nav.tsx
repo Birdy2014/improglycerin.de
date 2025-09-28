@@ -21,13 +21,11 @@ export default function Nav() {
   const pathname = usePathname();
 
   useEffect(() => {
+    setScrollTop(window.scrollY === 0);
     window.addEventListener("scroll", () => {
-      const currentScrollTop = window.scrollY === 0;
-      if (currentScrollTop !== scrollTop) {
-        setScrollTop(currentScrollTop);
-      }
+      setScrollTop(window.scrollY === 0);
     });
-  });
+  }, []);
 
   return (
     <>
