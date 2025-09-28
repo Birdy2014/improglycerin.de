@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import styles from "./Nav.module.css";
 
@@ -17,6 +18,7 @@ export default function Nav() {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollTop, setScrollTop] = useState(true);
+  const pathname = usePathname();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -51,7 +53,13 @@ export default function Nav() {
               >
                 {routes.map(({ name, href }) => (
                   <li key={name}>
-                    <Link className={styles.link} href={href}>
+                    <Link
+                      className={[
+                        styles.link,
+                        ...(pathname == href ? [styles.active] : []),
+                      ].join(" ")}
+                      href={href}
+                    >
                       <span>{name}</span>
                     </Link>
                   </li>

@@ -58,10 +58,15 @@
   width: 100%;
   font-weight: bold;
   padding: 10px 7.5px;
+  transition: color linear 0.1s;
 
   &:hover {
     color: var(--color-accent);
   }
+}
+
+.active {
+  color: var(--color-accent);
 }
 
 @media (width > 1050px) {
