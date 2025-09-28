@@ -1,11 +1,62 @@
 .page {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 60px;
 }
 
 .group-vertical {
   display: flex;
   flex-direction: column;
   gap: 1.1em;
+}
+
+.group-horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  & > * {
+    flex: 1 1 0;
+  }
+}
+
+@media (width > 1000px) {
+  .group-horizontal {
+    flex-direction: row;
+
+    & > * {
+      width: 0;
+    }
+  }
+}
+
+.journal-image {
+  position: relative;
+  display: block;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 25px;
+    width: 60%;
+    height: 20%;
+    box-shadow: 0 17px 10px rgba(0, 0, 0, 0.4);
+    opacity: 0.7;
+    z-index: -1;
+  }
+
+  &::before {
+    left: 10px;
+    rotate: -3deg;
+  }
+
+  &::after {
+    right: 10px;
+    rotate: 3deg;
+  }
+
+  & img {
+    width: 100%;
+  }
 }
