@@ -1,5 +1,10 @@
+import type { Metadata } from "next";
 import styles from "./page.module.css";
 import ModalImage from "../_components/ModalImage";
+
+export const metadata: Metadata = {
+  title: "ENSEMBLE",
+};
 
 export default function Page() {
   return (
