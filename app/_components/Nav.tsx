@@ -57,6 +57,7 @@ export default function Nav() {
                         ...(pathname == href ? [styles.active] : []),
                       ].join(" ")}
                       href={href}
+                      onNavigate={() => setMenuOpen(false)}
                     >
                       <span>{name}</span>
                     </Link>
