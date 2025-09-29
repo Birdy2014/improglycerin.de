@@ -31,32 +31,13 @@
 }
 
 .journal-image {
-  position: relative;
-  display: block;
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: 25px;
-    width: 60%;
-    height: 20%;
-    box-shadow: 0 17px 10px rgba(0, 0, 0, 0.4);
-    opacity: 0.7;
-    z-index: -1;
-  }
-
-  &::before {
-    left: 10px;
-    rotate: -3deg;
-  }
-
-  &::after {
-    right: 10px;
-    rotate: 3deg;
-  }
+  flex-grow: 0;
+  width: auto;
 
   & img {
-    width: 100%;
+    display: block;
+
+    /* Fill width on mobile */
+    min-width: 100%;
   }
 }

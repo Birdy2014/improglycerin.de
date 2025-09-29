@@ -28,25 +28,27 @@ export default function Home() {
         <p>Lasst Euch mitreißen. Das ist Improvisationstheater.</p>
       </div>
 
-      <Link
-        href="https://shop.journal-frankfurt.de/service_shop_einzel/FESTE-FEIERN-in-Frankfurt-Rhein-Main-1.html"
-        className={styles["journal-image"]}
-      >
-        <img src="https://improglycerin.de/wp-content/uploads/2025/08/FFF25_Auszeichnung_1080x566px.jpg" />
-      </Link>
+      <div className={styles["group-horizontal"]}>
+        <div className={styles["group-vertical"]}>
+          <Testimonial author="Wiesbadener Tagblatt">
+            Anspruchsvolle Kleinkunst… turbulent und lustig!
+          </Testimonial>
+          <Testimonial author="RadioX">
+            Wirklich klasse, wirklich schön! Ein sehr schöner, sehr
+            unterhaltsamer Abend! Ihr arbeitet dran, dass die Improszene in
+            Frankfurt noch lebendiger wird.
+          </Testimonial>
+          <Testimonial author="Sachsenhäuser Wochenblatt">
+            Eine Improtheater-Show der besonderen Art!
+          </Testimonial>
+        </div>
 
-      <div className={styles["group-vertical"]}>
-        <Testimonial author="Wiesbadener Tagblatt">
-          Anspruchsvolle Kleinkunst… turbulent und lustig!
-        </Testimonial>
-        <Testimonial author="RadioX">
-          Wirklich klasse, wirklich schön! Ein sehr schöner, sehr unterhaltsamer
-          Abend! Ihr arbeitet dran, dass die Improszene in Frankfurt noch
-          lebendiger wird.
-        </Testimonial>
-        <Testimonial author="Sachsenhäuser Wochenblatt">
-          Eine Improtheater-Show der besonderen Art!
-        </Testimonial>
+        <Link
+          href="https://shop.journal-frankfurt.de/service_shop_einzel/FESTE-FEIERN-in-Frankfurt-Rhein-Main-1.html"
+          className={styles["journal-image"]}
+        >
+          <img src="https://improtheater-frankfurt.de/public/img/FFF25_Auszeichnung_340x340px.jpg" />
+        </Link>
       </div>
 
       <div className={styles["group-horizontal"]}>
