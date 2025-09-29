@@ -1,0 +1,56 @@
+.container {
+  cursor: pointer;
+}
+
+.imageContainer {
+  overflow: hidden;
+}
+
+.image {
+  display: block;
+  transition: transform ease-in-out 0.5s;
+  object-fit: cover;
+  aspect-ratio: 5 / 4;
+  width: 100%;
+
+  &:hover {
+    transform: scale3d(1.1, 1.1, 1);
+  }
+}
+
+.title {
+  color: var(--color-accent);
+  font-size: 16px;
+  line-height: 24px;
+  padding: 10px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.dialog {
+  --vertical-padding: 50px;
+  width: min(calc(100vw - 2 * 50px), 500px);
+  max-height: calc(100vh - 2 * var(--vertical-padding));
+  margin: var(--vertical-padding) auto;
+  padding: 20px;
+  border: 2px solid color-mix(in oklab, var(--color-accent), white 10%);
+  border-radius: 5px;
+
+  &::backdrop {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(1px);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.dialogImage {
+  display: block;
+  width: 100%;
+}
+
+.dialogTitle {
+  color: var(--color-accent);
+  padding: 10px 0;
+}
