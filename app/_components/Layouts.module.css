@@ -1,0 +1,25 @@
+.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1em;
+}
+
+.horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  & > * {
+    flex: 1 1 0;
+  }
+}
+
+@media (width > 1000px) {
+  .horizontal {
+    flex-direction: row;
+
+    & > * {
+      width: 0;
+    }
+  }
+}

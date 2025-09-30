@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import Carousel from "./_components/Carousel";
 import Testimonial from "./_components/Testimonial";
+import { Vertical, Horizontal } from "./_components/Layouts";
 
 export default function Home() {
   return (
@@ -16,7 +17,7 @@ export default function Home() {
           "https://improglycerin.de/wp-content/uploads/2019/11/improglycerin-frankfurt-improtheater-Slider19-04-1200x500.jpg",
         ]}
       />
-      <div className={styles["group-vertical"]}>
+      <Vertical>
         <h2>IMPROTHEATER AUS FRANKFURT AM MAIN</h2>
         <p>
           Explosiv. Intensiv. Jetzt. Ihr ruft uns Ideen zu, wir machen daraus
@@ -26,10 +27,10 @@ export default function Home() {
           und Stand-Up-Comedy in einem.
         </p>
         <p>Lasst Euch mitreißen. Das ist Improvisationstheater.</p>
-      </div>
+      </Vertical>
 
-      <div className={styles["group-horizontal"]}>
-        <div className={styles["group-vertical"]}>
+      <Horizontal>
+        <Vertical>
           <Testimonial author="Wiesbadener Tagblatt">
             Anspruchsvolle Kleinkunst… turbulent und lustig!
           </Testimonial>
@@ -41,7 +42,7 @@ export default function Home() {
           <Testimonial author="Sachsenhäuser Wochenblatt">
             Eine Improtheater-Show der besonderen Art!
           </Testimonial>
-        </div>
+        </Vertical>
 
         <Link
           href="https://shop.journal-frankfurt.de/service_shop_einzel/FESTE-FEIERN-in-Frankfurt-Rhein-Main-1.html"
@@ -49,11 +50,11 @@ export default function Home() {
         >
           <img src="https://improtheater-frankfurt.de/public/img/FFF25_Auszeichnung_340x340px.jpg" />
         </Link>
-      </div>
+      </Horizontal>
 
-      <div className={styles["group-horizontal"]}>
+      <Horizontal>
         <img src="https://improglycerin.de/wp-content/uploads/2020/10/improglycerin-frankfurt-improtheater-teaser-ensemble-03.jpg" />
-        <div className={styles["group-vertical"]}>
+        <Vertical>
           <h2>ENSEMBLE</h2>
           <p>
             Von Adelsgeschlecht bis Aggro-Greis, von Buckel-Diener bis
@@ -61,11 +62,11 @@ export default function Home() {
             alle so unterschiedliche Charaktere mit sehr eigenen Lebenswegen
             sind.
           </p>
-        </div>
-      </div>
+        </Vertical>
+      </Horizontal>
 
-      <div className={styles["group-horizontal"]}>
-        <div className={styles["group-vertical"]}>
+      <Horizontal>
+        <Vertical>
           <h2>BUSINESS</h2>
           <p>
             Das haben Ihre KollegInnen wirklich verdient! Eine ausgefallene Show
@@ -74,13 +75,13 @@ export default function Home() {
             Kongress, auf einer Messe oder beim Betriebsfest: Improtheater
             überrascht einfach und macht Spaß.
           </p>
-        </div>
+        </Vertical>
         <img src="https://improglycerin.de/wp-content/uploads/2018/09/improglycerin-frankfurt-improtheater-teaser-background-grey-1.jpg" />
-      </div>
+      </Horizontal>
 
-      <div className={styles["group-horizontal"]}>
+      <Horizontal>
         <img src="https://improglycerin.de/wp-content/uploads/2018/09/improglycerin-frankfurt-improtheater-teaser-improschule-2.jpg" />
-        <div className={styles["group-vertical"]}>
+        <Vertical>
           <h2>IMPROSCHULE</h2>
           <p>
             Jeden Mittwoch gibt es bei uns einen Workshop. Egal, ob Anfänger
@@ -89,20 +90,20 @@ export default function Home() {
             Monat zu den Impro Basics. Einmal im Monat bieten wir samstags eine
             Jam und ein „Special“ an.
           </p>
-        </div>
-      </div>
+        </Vertical>
+      </Horizontal>
 
-      <div className={styles["group-horizontal"]}>
-        <div className={styles["group-vertical"]}>
+      <Horizontal>
+        <Vertical>
           <h2>NEWS</h2>
           <p>
             Was haben wir nur getan? Was soll denn noch passieren? Alle
             Neuigkeiten rund um Shows, Workshops, unser Ensemble, Geistesblitze,
             Gedichte…
           </p>
-        </div>
+        </Vertical>
         <img src="https://improglycerin.de/wp-content/uploads/2018/09/improglycerin-frankfurt-improtheater-teaser-background-red.jpg" />
-      </div>
+      </Horizontal>
     </div>
   );
 }
