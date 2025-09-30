@@ -58,7 +58,7 @@
   width: 100%;
   font-weight: bold;
   padding: 10px 7.5px;
-  transition: color linear 0.1s;
+  color: inherit;
 
   &:hover {
     color: var(--color-accent);

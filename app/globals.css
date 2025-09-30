@@ -37,6 +37,7 @@ h2 {
 }
 
 a {
-  color: inherit;
   text-decoration: none;
+  color: var(--color-accent);
+  transition: color linear 0.1s;
 }
