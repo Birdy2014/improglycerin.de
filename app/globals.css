@@ -26,6 +26,10 @@ h2 {
   font-size: 22px;
 }
 
+h3 {
+  font-size: 20px;
+}
+
 .center-container {
   max-width: calc(var(--max-desktop-width) + 10px);
   margin: 0 auto;

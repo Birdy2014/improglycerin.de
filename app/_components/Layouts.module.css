@@ -9,7 +9,7 @@
   flex-direction: column;
   gap: 60px;
 
-  & > * {
+  &.fixedWidth > * {
     flex: 1 1 0;
   }
 }
@@ -17,9 +17,9 @@
 @media (width > 1000px) {
   .horizontal {
     flex-direction: row;
+  }
 
-    & > * {
-      width: 0;
-    }
+  .horizontal.fixedWidth > * {
+    width: 0;
   }
 }

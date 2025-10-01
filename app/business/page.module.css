@@ -1,0 +1,16 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.image {
+  display: block;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% / 3);
+  flex-shrink: 0;
+}
