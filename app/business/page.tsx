@@ -1,6 +1,11 @@
+import type { Metadata } from "next";
 import styles from "./page.module.css";
 import { Vertical, Horizontal } from "../_components/Layouts";
 import Accordion from "../_components/Accordion";
+
+export const metadata: Metadata = {
+  title: "BUSINESS",
+};
 
 export default function Business() {
   return (
