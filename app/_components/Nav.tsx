@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import styles from "./Nav.module.css";
+import AnimatedCollapsibleContainer from "./AnimatedCollapsibleContainer";
 
 export default function Nav() {
   const routes = [
@@ -45,25 +46,26 @@ export default function Nav() {
                 className={styles.button}
                 onClick={() => setMenuOpen((old) => !old)}
               ></button>
-              <ul
-                className={styles.list}
-                style={{ height: menuOpen ? "fit-content" : "0" }}
-              >
-                {routes.map(({ name, href }) => (
-                  <li key={name}>
-                    <Link
-                      className={[
-                        styles.link,
-                        ...(pathname == href ? [styles.active] : []),
-                      ].join(" ")}
-                      href={href}
-                      onNavigate={() => setMenuOpen(false)}
-                    >
-                      <span>{name}</span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <div className={styles.listOuter}>
+                <AnimatedCollapsibleContainer duration="0.1s" open={menuOpen}>
+                  <ul className={styles.list}>
+                    {routes.map(({ name, href }) => (
+                      <li key={name}>
+                        <Link
+                          className={[
+                            styles.link,
+                            ...(pathname == href ? [styles.active] : []),
+                          ].join(" ")}
+                          href={href}
+                          onNavigate={() => setMenuOpen(false)}
+                        >
+                          <span>{name}</span>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </AnimatedCollapsibleContainer>
+              </div>
             </nav>
           </header>
         </div>

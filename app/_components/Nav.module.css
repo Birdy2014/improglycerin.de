@@ -38,19 +38,20 @@
   }
 }
 
-.list {
+.listOuter {
   position: absolute;
   top: var(--navbar-logo-height);
   left: 0;
   right: 0;
   background-color: white;
+  padding: 0 20px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.list {
   list-style-type: none;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
-  transition: height linear 0.1s;
-  padding: 0 20px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
 }
 
 .link {
@@ -74,13 +75,19 @@
     display: none;
   }
 
-  .list {
-    display: flex !important;
-    flex-direction: row;
+  .listOuter {
     position: static;
-    height: auto !important;
     padding: 0;
     box-shadow: unset;
+
+    & > div {
+      /* ugly way to reach inside AnimatedCollapsibleContainer */
+      height: auto !important;
+    }
+  }
+
+  .list {
+    flex-direction: row;
   }
 
   .link {

@@ -38,11 +38,6 @@
   line-height: 24px;
 }
 
-.content {
-  overflow: hidden;
-  transition: height linear 0.1s;
-}
-
 .contentInner {
-  margin: 20px 0;
+  padding: 20px 0;
 }

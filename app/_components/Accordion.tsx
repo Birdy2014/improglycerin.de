@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from "./Accordion.module.css";
+import AnimatedCollapsibleContainer from "./AnimatedCollapsibleContainer";
 
 interface AccordionItem {
   title: string;
@@ -26,7 +27,7 @@ export default function Accordion(props: AccordionProps) {
   return (
     <div>
       {props.items.map((item, idx) => (
-        <div className={styles.accordionItem}>
+        <div className={styles.accordionItem} key={idx}>
           <div
             className={[
               styles.titleContainer,
@@ -37,12 +38,9 @@ export default function Accordion(props: AccordionProps) {
             <div className={styles.icon} />
             <div className={styles.title}>{item.title}</div>
           </div>
-          <div
-            className={styles.content}
-            style={{ height: isOpen(idx) ? "fit-content" : "0" }}
-          >
+          <AnimatedCollapsibleContainer duration="0.2s" open={isOpen(idx)}>
             <div className={styles.contentInner}>{item.content}</div>
-          </div>
+          </AnimatedCollapsibleContainer>
         </div>
       ))}
     </div>
