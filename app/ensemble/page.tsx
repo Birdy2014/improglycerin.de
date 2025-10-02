@@ -9,10 +9,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <div className={styles.grid}>
-      <ModalImage
-        title="TRAM PHAM"
-        src="https://improglycerin.de/wp-content/uploads/2018/05/improglycerin-frankfurt-improtheater-ensemble-tram-pham-600x445.jpg"
-      >
+      <ModalImage title="TRAM PHAM" src="/ensemble-tram-pham.jpg">
         Tram – aka „die Chefin“ hatte die Idee zu unserer Truppe. Unsere längste
         Improhäsin belegte weit vor unserem legendären Zusammentreffen
         Improkurse. Gerne und detailliert schmückt sie Szenen aus. Weil sie im
@@ -23,10 +20,7 @@ export default function Page() {
         Lebens.
       </ModalImage>
 
-      <ModalImage
-        title="CHRISTOPH MORITZ"
-        src="https://improglycerin.de/wp-content/uploads/2019/09/improglycerin-frankfurt-improtheater-ensemble-christoph_moritz-600x444.jpg"
-      >
+      <ModalImage title="CHRISTOPH MORITZ" src="/ensemble-christoph-moritz.jpg">
         Christoph – kennt die hellen und dunklen Seiten des Lebens. Vor allem
         aus Shadowrun und Earthdawn. Er hat seinen angeborenen Spieltrieb
         nämlich früh am PC und bei Pen-and-Paper-Rollenspielen mit seinen
@@ -41,10 +35,7 @@ export default function Page() {
         Zuhause pflegt Christoph ganz trendbewusst seinen Urban Jungle.
       </ModalImage>
 
-      <ModalImage
-        title="KATHRIN FREIHUBE"
-        src="https://improglycerin.de/wp-content/uploads/2018/05/improglycerin-frankfurt-improtheater-ensemble-kathrin-freihube-600x445.jpg"
-      >
+      <ModalImage title="KATHRIN FREIHUBE" src="ensemble-kathrin-freihube.jpg">
         Kathrin – lebte ihren Zug zur Bühne schon oft aus: als „MC Matzke“ im
         KIKA, beim freien Theater „teatrum7“, an der Frankfurter Oper und am
         Schauspiel Frankfurt, in Krimi-Dinners und Filmproduktionen.
@@ -55,10 +46,7 @@ export default function Page() {
         Ratgeber gegen Improsucht und Farnpflanzen.
       </ModalImage>
 
-      <ModalImage
-        title="TORBEN SCHMIDT"
-        src="https://improglycerin.de/wp-content/uploads/2018/05/improglycerin-frankfurt-improtheater-ensemble-torben-schmidt-600x445.jpg"
-      >
+      <ModalImage title="TORBEN SCHMIDT" src="/ensemble-torben-schmidt.jpg">
         Torben – den haben sie echt von der Leine gelassen! Na klar, denn er
         kommt aus Hannover. Torben belegte schon zu Schulzeiten genau dort
         Improkurse. Was den Rest der Truppe mit Neid erfüllt. Der
@@ -71,10 +59,7 @@ export default function Page() {
         fort und ist gleich in mehreren Sprachen zuhause.
       </ModalImage>
 
-      <ModalImage
-        title="HAUKE SCHEER"
-        src="https://improglycerin.de/wp-content/uploads/2021/10/improglycerin-improtheater-frankfurt-hauke-scheer.jpg"
-      >
+      <ModalImage title="HAUKE SCHEER" src="/ensemble-hauke-scheer.jpg">
         Unser Saarland-Import hat als Jugendlicher viel Pen- and
         Paper-Rollenspiele durchgefochten und erlangte damit das
         Impro-Vordiplom. Als Hauke dann während seines BWL-Studiums in einer
@@ -88,10 +73,7 @@ export default function Page() {
         Action-Mini-Hauke!
       </ModalImage>
 
-      <ModalImage
-        title="ELISA VOGEL"
-        src="https://improglycerin.de/wp-content/uploads/2018/05/improglycerin-frankfurt-improtheater-ensemble-elisa-vogel-600x445.jpg"
-      >
+      <ModalImage title="ELISA VOGEL" src="/ensemble-elisa-vogel.jpg">
         Elisa – unser Original vom Main hat schon viele Jobs gemacht. Und so
         reich ist auch das Spiel unseres Frankfurter Urgesteins. Die
         Kunstpädagogin zeigt Euch nun auf der Bühne, was wahre Kunst ist. In
@@ -102,10 +84,7 @@ export default function Page() {
         uns, gerade das mögen wir ja so an ihr.
       </ModalImage>
 
-      <ModalImage
-        title="SUSANNE KÖNIG"
-        src="https://improglycerin.de/wp-content/uploads/2021/10/Improglycerin-Improtheater-Frankfurt-Susanne-Koenig.jpg"
-      >
+      <ModalImage title="SUSANNE KÖNIG" src="/ensemble-susanne-koenig.jpg">
         Malen, tanzen, Spiele erfinden – die Würzburgerin war schon als Kind
         recht kreativ und spielt deshalb noch heute gerne Langformen und Szenen
         mit Musik. Zum Impro kam Susanne über das klassische Theater, wo sie
@@ -120,7 +99,7 @@ export default function Page() {
 
       <ModalImage
         title="JONATHAN STALMANN"
-        src="https://improglycerin.de/wp-content/uploads/2019/09/improglycerin-frankfurt-improtheater-ensemble-jonathan_stalmann-600x445.jpg"
+        src="/ensemble-jonathan-stalmann.jpg"
       >
         Jonathan – musste einfach im Impro landen. Erst interessierten ihn
         Geschichten mit Lego-Rittern, dann die Wirtschaftsgeschichte, dann

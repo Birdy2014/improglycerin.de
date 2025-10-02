@@ -10,7 +10,6 @@ export default function Nav() {
   const routes = [
     { name: "START", href: "/" },
     { name: "SHOWS", href: "https://yesticket.org/events/de/improglycerin/" },
-    { name: "NEWS", href: "/news" },
     { name: "ENSEMBLE", href: "/ensemble" },
     { name: "BUSINESS", href: "/business" },
     { name: "IMPROSCHULE", href: "https://improtheater-frankfurt.de" },
@@ -36,10 +35,7 @@ export default function Nav() {
         <div className="center-container">
           <header className={styles.header}>
             <Link href="/">
-              <img
-                src="https://improglycerin.de/wp-content/uploads/2017/04/improglycerin_logo_website_white_medium_2.jpg"
-                alt="Improglycerin Logo"
-              />
+              <img src="/logo.jpg" alt="Improglycerin Logo" />
             </Link>
             <nav>
               <button

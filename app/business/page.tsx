@@ -10,10 +10,7 @@ export const metadata: Metadata = {
 export default function Business() {
   return (
     <div className={styles.page}>
-      <img
-        className={styles.image}
-        src="https://improglycerin.de/wp-content/uploads/2023/02/improglycerin-frankfurt-improtheater-business-scaled.jpg"
-      />
+      <img className={styles.image} src="/header-business.jpg" />
 
       <Horizontal fixedWidth={false}>
         <Vertical>

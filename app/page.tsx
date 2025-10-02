@@ -9,12 +9,12 @@ export default function Home() {
     <div className={styles.page}>
       <Carousel
         images={[
-          "https://improglycerin.de/wp-content/uploads/2021/11/improglycerin-frankfurt-improtheater-Slider-2021-3-1200x500.jpg",
-          "https://improglycerin.de/wp-content/uploads/2021/11/improglycerin-frankfurt-improtheater-Slider-2021-2-1200x500.jpg",
-          "https://improglycerin.de/wp-content/uploads/2019/11/improglycerin-frankfurt-improtheater-Slider19-03-1200x500.jpg",
-          "https://improglycerin.de/wp-content/uploads/2021/11/improglycerin-frankfurt-improtheater-Slider-2021-1-1200x500.jpg",
-          "https://improglycerin.de/wp-content/uploads/2019/11/improglycerin-frankfurt-improtheater-Slider19-02-1200x500.jpg",
-          "https://improglycerin.de/wp-content/uploads/2019/11/improglycerin-frankfurt-improtheater-Slider19-04-1200x500.jpg",
+          "/start-carousel-1.jpg",
+          "/start-carousel-2.jpg",
+          "/start-carousel-3.jpg",
+          "/start-carousel-4.jpg",
+          "/start-carousel-5.jpg",
+          "/start-carousel-6.jpg",
         ]}
       />
       <Vertical>
@@ -48,12 +48,27 @@ export default function Home() {
           href="https://shop.journal-frankfurt.de/service_shop_einzel/FESTE-FEIERN-in-Frankfurt-Rhein-Main-1.html"
           className={styles["journal-image"]}
         >
-          <img src="https://improtheater-frankfurt.de/public/img/FFF25_Auszeichnung_340x340px.jpg" />
+          <img src="/FFF25_Auszeichnung_700x500px.jpg" />
         </Link>
       </Horizontal>
 
       <Horizontal>
-        <img src="https://improglycerin.de/wp-content/uploads/2020/10/improglycerin-frankfurt-improtheater-teaser-ensemble-03.jpg" />
+        <Vertical>
+          <h2>SHOWS</h2>
+          <p>
+            Dolorum optio sint sapiente in nesciunt. Quia minima fugiat incidunt
+            inventore. Ratione blanditiis fugiat laborum exercitationem. In
+            rerum velit cupiditate magni animi qui fugiat omnis.
+            <br />
+            Aut similique qui facere aliquam. Quam consequatur totam illo. Omnis
+            consequuntur quaerat animi quia ipsa.
+          </p>
+        </Vertical>
+        <img src="/teaser-shows.jpg" />
+      </Horizontal>
+
+      <Horizontal>
+        <img src="/teaser-ensemble.jpg" />
         <Vertical>
           <h2>ENSEMBLE</h2>
           <p>
@@ -76,11 +91,11 @@ export default function Home() {
             überrascht einfach und macht Spaß.
           </p>
         </Vertical>
-        <img src="https://improglycerin.de/wp-content/uploads/2018/09/improglycerin-frankfurt-improtheater-teaser-background-grey-1.jpg" />
+        <img src="/teaser-business.jpg" />
       </Horizontal>
 
       <Horizontal>
-        <img src="https://improglycerin.de/wp-content/uploads/2018/09/improglycerin-frankfurt-improtheater-teaser-improschule-2.jpg" />
+        <img src="/teaser-improschule.jpg" />
         <Vertical>
           <h2>IMPROSCHULE</h2>
           <p>
@@ -91,18 +106,6 @@ export default function Home() {
             Jam und ein „Special“ an.
           </p>
         </Vertical>
-      </Horizontal>
-
-      <Horizontal>
-        <Vertical>
-          <h2>NEWS</h2>
-          <p>
-            Was haben wir nur getan? Was soll denn noch passieren? Alle
-            Neuigkeiten rund um Shows, Workshops, unser Ensemble, Geistesblitze,
-            Gedichte…
-          </p>
-        </Vertical>
-        <img src="https://improglycerin.de/wp-content/uploads/2018/09/improglycerin-frankfurt-improtheater-teaser-background-red.jpg" />
       </Horizontal>
     </div>
   );
