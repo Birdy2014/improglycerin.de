@@ -33,7 +33,6 @@
   margin: var(--vertical-margin) auto;
   padding: 30px;
   border: 0;
-  border-radius: 5px;
 
   &::backdrop {
     background-color: rgba(0, 0, 0, 0.3);
