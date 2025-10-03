@@ -14,3 +14,23 @@
   width: calc(100% / 3);
   flex-shrink: 0;
 }
+
+.customerListContainer {
+  background-color: #d3e5e5;
+  padding: 20px;
+}
+
+.customerListHeading {
+  padding-bottom: 20px;
+}
+
+.customerList {
+  padding: 40px;
+}
+
+@media (width > 1000px) {
+  .customerList {
+    columns: 2;
+    column-gap: 100px;
+  }
+}

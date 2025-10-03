@@ -94,6 +94,29 @@ export default function Business() {
           </Vertical>
         </div>
       </Horizontal>
+
+      <div className={styles.customerListContainer}>
+        <h2 className={styles.customerListHeading}>
+          Einige unserer Kunden und Partner:
+        </h2>
+        <ul className={styles.customerList}>
+          <li>Deutsche Post DHL Group</li>
+          <li>DB Netz AG</li>
+          <li>Studienstiftung des Deutschen Volkes</li>
+          <li>Baden-Badener Unternehmer Gespräche, Gruppe 42</li>
+          <li>Väter PAL gGmbH</li>
+          <li>Design Thinking Barcamp Darmstadt</li>
+          <li>Kulturgemeinde Kelkheim e.V.</li>
+          <li>Vitos Rheingau – Kinder/Jugendpsychiatrie</li>
+          <li>Kulturamt/Stadt Bruchköbel</li>
+          <li>Querbeet Bio-Frischvermarktung GmbH</li>
+          <li>Ostbayerische Technische Hochschule Regensburg</li>
+          <li>Nachbarschaftshilfe Griesheim</li>
+          <li>Kulturkirche St. Peter</li>
+          <li>Meilor Bondoc Comedy</li>
+          <li>Weinbar Felsenkeller am Zauberberg</li>
+        </ul>
+      </div>
     </div>
   );
 }
