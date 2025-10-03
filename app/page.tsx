@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Carousel from "./_components/Carousel";
 import Testimonial from "./_components/Testimonial";
 import { Vertical, Horizontal } from "./_components/Layouts";
+import Button from "./_components/Button";
 
 export default function Home() {
   return (
@@ -63,6 +64,9 @@ export default function Home() {
             Aut similique qui facere aliquam. Quam consequatur totam illo. Omnis
             consequuntur quaerat animi quia ipsa.
           </p>
+          <Button href="https://yesticket.org/events/de/improglycerin/">
+            ZU DEN SHOWS
+          </Button>
         </Vertical>
         <img src="/teaser-shows.jpg" />
       </Horizontal>
@@ -77,6 +81,7 @@ export default function Home() {
             alle so unterschiedliche Charaktere mit sehr eigenen Lebenswegen
             sind.
           </p>
+          <Button href="/ensemble">SO TRETET HERVOR!</Button>
         </Vertical>
       </Horizontal>
 
@@ -90,6 +95,7 @@ export default function Home() {
             Kongress, auf einer Messe oder beim Betriebsfest: Improtheater
             überrascht einfach und macht Spaß.
           </p>
+          <Button href="/business">MEHR ERFAHREN</Button>
         </Vertical>
         <img src="/teaser-business.jpg" />
       </Horizontal>
@@ -105,6 +111,9 @@ export default function Home() {
             Monat zu den Impro Basics. Einmal im Monat bieten wir samstags eine
             Jam und ein „Special“ an.
           </p>
+          <Button href="https://Improtheater-frankfurt.de">
+            SCHULT MICH EIN!
+          </Button>
         </Vertical>
       </Horizontal>
     </div>

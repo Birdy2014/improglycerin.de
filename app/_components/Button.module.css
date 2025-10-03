@@ -1,0 +1,15 @@
+.button {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  padding: 13px 29px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px;
+  background-color: #cb092a;
+  color: white;
+
+  &:hover {
+    background-color: #3a0300;
+  }
+}

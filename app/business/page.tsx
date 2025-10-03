@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import styles from "./page.module.css";
 import { Vertical, Horizontal } from "../_components/Layouts";
 import Accordion from "../_components/Accordion";
+import Button from "../_components/Button";
 
 export const metadata: Metadata = {
   title: "BUSINESS",
@@ -91,6 +92,9 @@ export default function Business() {
                 },
               ]}
             />
+            <Button href="mailto:hallo@improglycerin.de?subject=Anfrage">
+              ANFRAGE SCHICKEN
+            </Button>
           </Vertical>
         </div>
       </Horizontal>
