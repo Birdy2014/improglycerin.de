@@ -22,10 +22,12 @@ export default function Footer() {
             <Link
               href="https://www.facebook.com/improglycerin"
               className={styles["icon-facebook"]}
+              title="Facebook"
             ></Link>
             <Link
               href="https://www.instagram.com/improglycerin"
               className={styles["icon-instagram"]}
+              title="Instagram"
             ></Link>
           </div>
         </div>

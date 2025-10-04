@@ -48,6 +48,7 @@ export default function Home() {
         <Link
           href="https://shop.journal-frankfurt.de/service_shop_einzel/FESTE-FEIERN-in-Frankfurt-Rhein-Main-1.html"
           className={styles["journal-image"]}
+          aria-label="Journal Frankfurt FESTE FEIERN in Frankfurt & Rhein-Main kaufen"
         >
           <img src="/FFF25_Auszeichnung_700x500px.jpg" />
         </Link>
