@@ -17,6 +17,7 @@
 @media (width > 1000px) {
   .horizontal {
     flex-direction: row;
+    align-items: flex-start;
   }
 
   .horizontal.fixedWidth > * {
