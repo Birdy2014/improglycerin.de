@@ -5,6 +5,8 @@ import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
 import styles from "./Nav.module.css";
 import AnimatedCollapsibleContainer from "./AnimatedCollapsibleContainer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default function Nav() {
   const routes = [
@@ -41,7 +43,9 @@ export default function Nav() {
               <button
                 className={styles.button}
                 onClick={() => setMenuOpen((old) => !old)}
-              ></button>
+              >
+                <FontAwesomeIcon icon={faBars} size="2xl" />
+              </button>
               <div className={styles.listOuter}>
                 <AnimatedCollapsibleContainer duration="0.1s" open={menuOpen}>
                   <ul className={styles.list}>

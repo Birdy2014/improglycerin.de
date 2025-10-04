@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Carousel.module.css";
 
 interface CarouselProps {
@@ -66,11 +68,15 @@ export default function Carousel(props: CarouselProps) {
       <a
         className={[styles.button, styles["button-prev"]].join(" ")}
         onClick={prevImage}
-      ></a>
+      >
+        <FontAwesomeIcon icon={faAngleLeft} size="2xs" />
+      </a>
       <a
         className={[styles.button, styles["button-next"]].join(" ")}
         onClick={nextImage}
-      ></a>
+      >
+        <FontAwesomeIcon icon={faAngleRight} size="2xs" />
+      </a>
       {props.images.map((src, index) => (
         <img
           key={src}

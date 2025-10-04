@@ -4,6 +4,10 @@ import "./globals.css";
 import Nav from "./_components/Nav";
 import Footer from "./_components/Footer";
 
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
+
 const roboto = Roboto({
   subsets: ["latin"],
 });

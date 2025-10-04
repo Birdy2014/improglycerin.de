@@ -1,8 +1,7 @@
 import Link from "next/link";
-import localFont from "next/font/local";
 import styles from "./Footer.module.css";
-
-const icomoon = localFont({ src: "../../public/icomoon.woff" });
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -18,17 +17,19 @@ export default function Footer() {
             <Link href="/datenschutz">DATENSCHUTZ</Link>
             <Link href="/impressum">IMPRESSUM</Link>
           </div>
-          <div className={`${styles["links-social"]} ${icomoon.className}`}>
+          <div className={styles["links-social"]}>
             <Link
               href="https://www.facebook.com/improglycerin"
-              className={styles["icon-facebook"]}
               title="Facebook"
-            ></Link>
+            >
+              <FontAwesomeIcon icon={faFacebookF} />
+            </Link>
             <Link
               href="https://www.instagram.com/improglycerin"
-              className={styles["icon-instagram"]}
               title="Instagram"
-            ></Link>
+            >
+              <FontAwesomeIcon icon={faInstagram} />
+            </Link>
           </div>
         </div>
       </div>

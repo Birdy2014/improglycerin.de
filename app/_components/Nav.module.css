@@ -31,11 +31,6 @@
   background-color: transparent;
   cursor: pointer;
   line-height: var(--navbar-logo-height);
-
-  &::before {
-    font-size: 25px;
-    content: "\f0c9";
-  }
 }
 
 .listOuter {
