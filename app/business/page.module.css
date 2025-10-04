@@ -11,7 +11,6 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  width: calc(100% / 3);
   flex-shrink: 0;
 }
 
@@ -29,6 +28,10 @@
 }
 
 @media (width > 1000px) {
+  .sidebar {
+    width: calc(100% / 3);
+  }
+
   .customerList {
     columns: 2;
     column-gap: 100px;
