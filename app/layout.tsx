@@ -26,9 +26,22 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Improglycerin",
+    url: "https://improglycerin.de",
+  };
+
   return (
     <html lang="en">
       <body className={roboto.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         <Nav />
         <div className="center-container">
           <div className="content-wrapper">{children}</div>
