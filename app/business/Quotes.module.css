@@ -1,0 +1,19 @@
+.quotes {
+  display: grid;
+}
+
+.quote {
+  grid-area: 1 / 1;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.visible {
+  opacity: 1;
+}
+
+@starting-style {
+  .visible {
+    opacity: 0;
+  }
+}

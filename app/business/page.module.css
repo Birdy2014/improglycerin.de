@@ -15,7 +15,7 @@
 }
 
 .customerListContainer {
-  background-color: #d3e5e5;
+  background-color: var(--color-alternate-light);
   padding: 20px;
 }
 

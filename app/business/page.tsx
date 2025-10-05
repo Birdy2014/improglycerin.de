@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import { Vertical, Horizontal } from "../_components/Layouts";
 import Accordion from "../_components/Accordion";
 import Button from "../_components/Button";
+import Quotes from "./Quotes";
 
 export const metadata: Metadata = {
   title: "BUSINESS",
@@ -121,6 +122,8 @@ export default function Business() {
           <li>Weinbar Felsenkeller am Zauberberg</li>
         </ul>
       </div>
+
+      <Quotes />
     </div>
   );
 }
