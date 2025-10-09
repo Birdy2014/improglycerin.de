@@ -10,26 +10,35 @@
   cursor: pointer;
   align-items: center;
 
-  &:hover .icon::before {
-    background-color: var(--color-accent);
+  &:hover .iconInactive {
+    color: var(--color-accent);
   }
 }
 
-.active .icon::before {
-  background-color: var(--color-accent);
-  content: "—";
+.iconContainer {
+  display: grid;
 }
 
-.icon::before {
-  display: block;
-  content: "+";
-  background-color: #333333;
-  color: #ffffff;
-  width: 24px;
-  line-height: 24px;
-  font-size: 15px;
-  text-align: center;
-  transition: background-color linear 0.2s;
+.icon {
+  grid-area: 1 / 1;
+  transition: color linear 0.2s;
+}
+
+.iconActive {
+  visibility: hidden;
+}
+
+.active .iconActive {
+  visibility: visible;
+  color: var(--color-accent);
+}
+
+.iconInactive {
+  visibility: visible;
+}
+
+.active .iconInactive {
+  visibility: hidden;
 }
 
 .title {

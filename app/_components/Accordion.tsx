@@ -3,6 +3,8 @@
 import { useState } from "react";
 import styles from "./Accordion.module.css";
 import AnimatedCollapsibleContainer from "./AnimatedCollapsibleContainer";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 interface AccordionItem {
   title: string;
@@ -35,7 +37,16 @@ export default function Accordion(props: AccordionProps) {
             ].join(" ")}
             onClick={() => toggleOpen(idx)}
           >
-            <div className={styles.icon} />
+            <div className={styles.iconContainer}>
+              <FontAwesomeIcon
+                icon={faAngleDown}
+                className={`${styles.icon} ${styles.iconInactive}`}
+              />
+              <FontAwesomeIcon
+                icon={faAngleUp}
+                className={`${styles.icon} ${styles.iconActive}`}
+              />
+            </div>
             <div className={styles.title}>{item.title}</div>
           </div>
           <AnimatedCollapsibleContainer duration="0.2s" open={isOpen(idx)}>
