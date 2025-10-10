@@ -27,10 +27,11 @@
 }
 
 .dialog {
-  --vertical-margin: 50px;
-  width: min(calc(100vw - 2 * 50px), 500px);
-  max-height: calc(100vh - 2 * var(--vertical-margin));
-  margin: var(--vertical-margin) auto;
+  --margin-bottom: 50px;
+  width: 100%;
+  max-width: 500px;
+  max-height: calc(100vh - 50px - var(--margin-bottom));
+  margin: 50px auto var(--margin-bottom);
   padding: 30px;
   border: 0;
 
@@ -53,4 +54,10 @@
 .dialogTitle {
   color: var(--color-accent);
   padding: 10px 0;
+}
+
+@media (width < 900px) {
+  .dialog {
+    --margin-bottom: 0px;
+  }
 }
