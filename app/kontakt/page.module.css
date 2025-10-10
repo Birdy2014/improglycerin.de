@@ -1,0 +1,19 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.tile {
+  background-color: var(--color-accent);
+  padding: 15px;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+
+  & a {
+    color: inherit;
+  }
+}
