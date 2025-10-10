@@ -1,0 +1,34 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.shows {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.show {
+  display: flex;
+  color: black;
+  gap: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.testimonials {
+  column-gap: 100px;
+
+  & > * {
+    break-inside: avoid;
+    margin-bottom: 10px;
+  }
+}
+
+@media (width > 1000px) {
+  .testimonials {
+    columns: 2;
+  }
+}

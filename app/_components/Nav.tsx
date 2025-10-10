@@ -11,7 +11,7 @@ import { faBars } from "@fortawesome/free-solid-svg-icons";
 export default function Nav() {
   const routes = [
     { name: "START", href: "/" },
-    { name: "SHOWS", href: "https://yesticket.org/events/de/improglycerin/" },
+    { name: "SHOWS", href: "/shows" },
     { name: "ENSEMBLE", href: "/ensemble" },
     { name: "BUSINESS", href: "/business" },
     { name: "IMPROSCHULE", href: "https://improtheater-frankfurt.de" },

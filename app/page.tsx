@@ -65,9 +65,7 @@ export default function Home() {
             Aut similique qui facere aliquam. Quam consequatur totam illo. Omnis
             consequuntur quaerat animi quia ipsa.
           </p>
-          <Button href="https://yesticket.org/events/de/improglycerin/">
-            ZU DEN SHOWS
-          </Button>
+          <Button href="/shows">ZU DEN SHOWS</Button>
         </Vertical>
         <img src="/teaser-shows.jpg" />
       </Horizontal>

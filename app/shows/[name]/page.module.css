@@ -1,0 +1,54 @@
+.page {
+  display: grid;
+  gap: 20px;
+
+  & img {
+    max-width: 100%;
+  }
+}
+
+.image {
+  grid-area: 1 / 1;
+}
+
+.main {
+  grid-area: 3 / 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar {
+  grid-area: 2 / 1;
+}
+
+.description {
+  background-color: rgba(240, 240, 240, 1);
+  padding: 20px;
+
+  & dt {
+    font-weight: bold;
+  }
+
+  & dd {
+    margin-bottom: 10px;
+  }
+}
+
+@media (width > 1000px) {
+  .page {
+    grid-template-columns: 1fr calc(100% / 3);
+  }
+
+  .image {
+    grid-area: 1 / 1;
+  }
+
+  .main {
+    grid-area: 2 / 1;
+  }
+
+  .sidebar {
+    grid-area: 1 / 2 / 3 / 2;
+  }
+}
