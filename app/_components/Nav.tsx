@@ -54,7 +54,11 @@ export default function Nav() {
                         <Link
                           className={[
                             styles.link,
-                            ...(pathname == href ? [styles.active] : []),
+                            ...(pathname == href ||
+                            // include show-pages
+                            (href === "/shows" && pathname.startsWith(href))
+                              ? [styles.active]
+                              : []),
                           ].join(" ")}
                           href={href}
                           onNavigate={() => setMenuOpen(false)}
