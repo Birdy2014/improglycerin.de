@@ -77,7 +77,8 @@ export async function fetchTestimonials(
     organizer: "12",
     key: getApiKey(),
     type: type,
-    count: count.toString(),
+    // Yesticket returns some old testimonials, so we need more to filter
+    count: (count * 3).toString(),
   });
 
   const testimonialsRequest = await fetch(
@@ -86,9 +87,13 @@ export async function fetchTestimonials(
   );
 
   const testimonials: YesticketTestimonial[] = await testimonialsRequest.json();
-  return testimonials.filter(
-    (testimonial) => testimonial.booker_testimonial_stars === 5,
-  );
+  const oneYear = 1000 * 60 * 60 * 24 * 365;
+  return testimonials
+    .filter(
+      (testimonial) =>
+        Date.now() - new Date(testimonial.date).getTime() < oneYear,
+    )
+    .slice(0, count);
 }
 
 function getApiKey(): string {
