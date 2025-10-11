@@ -13,9 +13,45 @@
 .show {
   display: flex;
   color: black;
-  gap: 10px;
+  justify-content: space-between;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.showLeft {
+  display: flex;
+  flex-direction: column;
+}
+
+.showRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.showInfos {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.5em;
+  gap: 20px;
+}
+
+/* This is copied from the Button component because nesting <a> tags is not
+ * allowed, so Button can't be used. */
+.button {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  padding: 13px 29px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px;
+  background-color: #cb092a;
+  color: white;
+
+  &:hover {
+    background-color: #3a0300;
+  }
 }
 
 .testimonials {

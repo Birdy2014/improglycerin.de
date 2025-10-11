@@ -19,6 +19,7 @@ export default async function Shows() {
     weekday: "long",
     month: "long",
     day: "numeric",
+    year: "numeric",
     timeZone: "Europe/Berlin",
   });
 
@@ -31,8 +32,19 @@ export default async function Shows() {
             className={styles.show}
             href={`/shows/${event.event_urlsafename}`}
           >
-            <div>{dateFormat.format(new Date(event.event_datetime))}</div>
-            <div>{event.event_name}</div>
+            <div className={styles.showLeft}>
+              <div className={styles.showName}>{event.event_name}</div>
+              <div className={styles.showInfos}>
+                <div>{dateFormat.format(new Date(event.event_datetime))}</div>
+                <div>{event.location_name}</div>
+              </div>
+            </div>
+            <div className={styles.showRight}>
+              <div className={styles.button}>Tickets</div>
+              <div className={styles.showInfos}>
+                <div>{event.event_urgency_string}</div>
+              </div>
+            </div>
           </Link>
         ))}
       </div>
