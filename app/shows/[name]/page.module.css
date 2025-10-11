@@ -15,15 +15,18 @@
   grid-area: 3 / 1;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+}
+
+.paragraph {
+  margin: 20px 0;
 }
 
 .sidebar {
   grid-area: 2 / 1;
 }
 
-.description {
-  background-color: rgba(240, 240, 240, 1);
+.infobox {
+  background-color: var(--color-alternate-light);
   padding: 20px;
 
   & dt {

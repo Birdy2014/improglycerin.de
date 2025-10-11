@@ -34,10 +34,16 @@ export default async function Page(props: PageProps<"/shows/[name]">) {
       <img className={styles.image} src={event.event_picture_url} />
       <div className={styles.main}>
         <h1>{event.event_name}</h1>
-        <div style={{ whiteSpace: "pre-wrap" }}>{event.event_description}</div>
+        <div>
+          {event.event_description.split("\n").map((line, lineNr) => (
+            <p className={styles.paragraph} key={`description-line-${lineNr}`}>
+              {line}
+            </p>
+          ))}
+        </div>
       </div>
       <div className={styles.sidebar}>
-        <dl className={styles.description}>
+        <dl className={styles.infobox}>
           <dt>Wann?</dt>
           <dd>
             <div>{dateFormat.format(beginDate)}</div>
@@ -48,9 +54,6 @@ export default async function Page(props: PageProps<"/shows/[name]">) {
             <div>{event.location_name}</div>
             <div>{event.location_street}</div>
           </dd>
-          <dt>Kosten?</dt>
-          <dd>{event.tickets}</dd>
-          <dt>Anmelden?</dt>
           <dd>
             <Button href={event.yesticket_booking_url.toString()}>
               Tickets
