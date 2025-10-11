@@ -35,7 +35,7 @@ export default function Page() {
         Zuhause pflegt Christoph ganz trendbewusst seinen Urban Jungle.
       </ModalImage>
 
-      <ModalImage title="KATHRIN FREIHUBE" src="ensemble-kathrin-freihube.jpg">
+      <ModalImage title="KATHRIN FREIHUBE" src="/ensemble-kathrin-freihube.jpg">
         Kathrin – lebte ihren Zug zur Bühne schon oft aus: als „MC Matzke“ im
         KIKA, beim freien Theater „teatrum7“, an der Frankfurter Oper und am
         Schauspiel Frankfurt, in Krimi-Dinners und Filmproduktionen.
