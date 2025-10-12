@@ -4,10 +4,16 @@
   gap: 40px;
 }
 
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .tile {
-  background-color: var(--color-accent);
+  background-color: var(--color-alternate-light);
   padding: 15px;
-  color: white;
+  color: black;
   display: flex;
   flex-direction: row;
   gap: 20px;
