@@ -58,12 +58,13 @@ export default function Home() {
         <Vertical>
           <h2>SHOWS</h2>
           <p>
-            Dolorum optio sint sapiente in nesciunt. Quia minima fugiat incidunt
-            inventore. Ratione blanditiis fugiat laborum exercitationem. In
-            rerum velit cupiditate magni animi qui fugiat omnis.
+            Einmal im Monat ist Showtime!
             <br />
-            Aut similique qui facere aliquam. Quam consequatur totam illo. Omnis
-            consequuntur quaerat animi quia ipsa.
+            In jeder unserer Shows entsteht ein einzigartiger Abend voller
+            spontaner Geschichten, überraschender Wendungen und ehrlicher
+            Emotionen – live und ohne Drehbuch. Ob zum Lachen, Staunen oder
+            Mitfiebern: kein Abend ist wie der andere. Komm vorbei und erlebe
+            Improtheater pur!
           </p>
           <Button href="/shows">ZU DEN SHOWS</Button>
         </Vertical>
