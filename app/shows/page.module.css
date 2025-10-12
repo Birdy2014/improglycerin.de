@@ -16,6 +16,7 @@
   justify-content: space-between;
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 84px;
 }
 
 .showLeft {
@@ -32,7 +33,7 @@
 .showInfos {
   display: flex;
   flex-direction: row;
-  font-size: 0.5em;
+  font-size: 0.7em;
   gap: 20px;
 }
 
