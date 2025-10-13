@@ -40,7 +40,7 @@ export default async function Shows() {
               </div>
             </div>
             <div className={styles.showRight}>
-              <div className={styles.button}>Tickets</div>
+              <div className={styles.button}>Mehr Infos</div>
               <div className={styles.showInfos}>
                 <div>{event.event_urgency_string}</div>
               </div>
