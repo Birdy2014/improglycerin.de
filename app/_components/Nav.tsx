@@ -15,6 +15,7 @@ export default function Nav() {
     { name: "ENSEMBLE", href: "/ensemble" },
     { name: "BUSINESS", href: "/business" },
     { name: "IMPROSCHULE", href: "https://improtheater-frankfurt.de" },
+    { name: "NEWSLETTER", href: "/newsletter" },
     { name: "KONTAKT", href: "/kontakt" },
   ];
 

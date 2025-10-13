@@ -1,0 +1,50 @@
+.newsletter {
+  & p {
+    margin: 20px 0;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.checkboxContainer input {
+  margin: 3px 6px 3px 3px;
+}
+
+.textContainer input {
+  border: none;
+  border-bottom: 2px solid black;
+  max-width: 350px;
+  width: 100%;
+  font-size: 20px;
+  margin-bottom: 12px;
+  padding-bottom: 3px;
+
+  &:focus {
+    border-bottom-color: var(--color-accent);
+    transition: border 0.4s;
+  }
+}
+
+/* This is copied from the Button component because it is not a Link. */
+.subscribeButton {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  padding: 13px 29px;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px;
+  background-color: #cb092a;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #3a0300;
+  }
+}
