@@ -13,11 +13,11 @@ export default function Footer() {
             Copyright 2025 – IMPROGLYCERIN Improvisationstheater aus Frankfurt
             am Main e.V.
           </div>
-          <div className={styles["links-legal"]}>
+          <div className={styles.links}>
             <Link href="/datenschutz">DATENSCHUTZ</Link>
+            <span>│</span>
             <Link href="/impressum">IMPRESSUM</Link>
-          </div>
-          <div className={styles["links-social"]}>
+            <span>│</span>
             <Link
               href="https://www.facebook.com/improglycerin"
               title="Facebook"

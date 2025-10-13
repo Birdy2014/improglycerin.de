@@ -23,33 +23,15 @@
   gap: 20px;
 }
 
-.links-legal {
+.links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  gap: 5px;
 
   font-weight: bold;
 
   & a:hover {
     color: var(--color-accent);
-  }
-}
-
-.links-social {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-
-  & a {
-    background-color: var(--color-accent);
-    color: white;
-    border-radius: 4px;
-    padding: 8px;
-
-    & svg {
-      display: block;
-      width: 16px;
-      height: 16px;
-    }
   }
 }
