@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Nav from "./_components/Nav";
@@ -35,6 +36,14 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <Script
+          strategy="afterInteractive"
+          src="https://analytics.improglycerin.de/script.js"
+          data-website-id="392ef956-e031-4bf6-a6fe-024a2297022b"
+          data-domains="improglycerin.de"
+        ></Script>
+      </head>
       <body className={roboto.className}>
         <script
           type="application/ld+json"

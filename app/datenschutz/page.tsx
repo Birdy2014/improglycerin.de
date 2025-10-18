@@ -296,6 +296,27 @@ export default function Datenschutz() {
           Erstellt mit Datenschutz-Generator.de von RA Dr. Thomas Schwenke
         </Link>
       </p>
+
+      <Vertical>
+        <h2>Analyse</h2>
+        <p>
+          Wir nutzen das Tool <Link href="https://umami.is">Umami</Link>, um das
+          Besucherverhalten auf unserer Website zu analysieren – ganz
+          transparent und datenschutzfreundlich. Umami speichert keine Daten im
+          Browser der Nutzer und setzt keine Cookies ein. Die erfassten Daten
+          werden sicher anonymisiert, sodass eine persönliche Identifikation
+          ausgeschlossen ist. Wir hosten Umami auf unserem eigenen Server,
+          wodurch keinerlei Daten an Dritte weitergegeben werden.
+        </p>
+        <p>
+          Interessiert sind wir nur an Besucherzahlen: Gesamtbesuche,
+          einzigartige Besucher und zeitliche Trends (z. B.
+          täglich/wöchentlich). Beliebtheit einzelner Seiten: Seitenaufrufe pro
+          Seite, durchschnittliche Verweildauer pro Seite und Absprungrate. Die
+          Daten helfen uns, Inhalte besser zu planen und das Nutzererlebnis zu
+          verbessern, bleiben jedoch anonym und sind nicht personenbezogen.
+        </p>
+      </Vertical>
     </div>
   );
 }
