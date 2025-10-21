@@ -7,6 +7,8 @@ import Quotes from "./Quotes";
 
 export const metadata: Metadata = {
   title: "BUSINESS",
+  description:
+    "Improtheater als Workshop! In Frankfurt am Main und Rhein-Main. Für Firmen: Kreativität und Teambuilding lernen in Shows und Trainings.",
 };
 
 export default function Business() {

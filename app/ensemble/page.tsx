@@ -4,6 +4,8 @@ import ModalImage from "../_components/ModalImage";
 
 export const metadata: Metadata = {
   title: "ENSEMBLE",
+  description:
+    "Wir sind ein kreatives Impro-Schauspiel-Team aus den Bereichen Schauspiel, Pädagogik, Journalismus, Marketing, Social Media, Finance.",
 };
 
 export default function Page() {
