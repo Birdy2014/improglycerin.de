@@ -12,6 +12,7 @@
   object-fit: cover;
   aspect-ratio: 5 / 4;
   width: 100%;
+  height: auto;
 
   &:hover {
     transform: scale3d(1.1, 1.1, 1);
@@ -48,6 +49,7 @@
 .dialogImage {
   display: block;
   width: 100%;
+  height: auto;
   margin-bottom: 10px;
 }
 

@@ -1,12 +1,13 @@
 "use client";
 
+import Image, { StaticImageData } from "next/image";
 import { useRef } from "react";
 import styles from "./ModalImage.module.css";
 
 interface ModalImageProps {
   children: React.ReactNode;
   title: string;
-  src: string;
+  src: StaticImageData;
 }
 
 export default function ModalImage(props: ModalImageProps) {
@@ -28,13 +29,21 @@ export default function ModalImage(props: ModalImageProps) {
     <div>
       <div onClick={openModal} className={styles.container}>
         <div className={styles.imageContainer}>
-          <img src={props.src} className={styles.image} />
+          <Image
+            src={props.src}
+            className={styles.image}
+            alt={`Foto ${props.title}`}
+          />
         </div>
         <div className={styles.title}>{props.title}</div>
       </div>
       <dialog ref={dialogRef} className={styles.dialog} onClick={closeModal}>
         <div className={styles.dialogInner}>
-          <img src={props.src} className={styles.dialogImage} />
+          <Image
+            src={props.src}
+            className={styles.dialogImage}
+            alt={props.title}
+          />
           <div className={styles.dialogTitle}>{props.title}</div>
           {props.children}
         </div>
