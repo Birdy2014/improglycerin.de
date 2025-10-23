@@ -107,6 +107,7 @@ export default function Business() {
           Einige unserer Kunden und Partner:
         </h2>
         <ul className={styles.customerList}>
+          <li>Deutsche Herzstiftung e.V.</li>
           <li>Deutsche Post DHL Group</li>
           <li>DB Netz AG</li>
           <li>Studienstiftung des Deutschen Volkes</li>
