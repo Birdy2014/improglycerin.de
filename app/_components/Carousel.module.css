@@ -43,7 +43,7 @@
   }
 }
 
-.button-prev {
+.buttonPrev {
   grid-column: 1;
   grid-row: 2;
 
@@ -53,7 +53,7 @@
   }
 }
 
-.button-next {
+.buttonNext {
   grid-column: 3;
   grid-row: 2;
 

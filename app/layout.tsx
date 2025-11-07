@@ -52,8 +52,8 @@ export default function RootLayout({
           }}
         />
         <Nav />
-        <div className="center-container">
-          <div className="content-wrapper">{children}</div>
+        <div className="centerContainer">
+          <div className="contentWrapper">{children}</div>
         </div>
         <Footer />
       </body>

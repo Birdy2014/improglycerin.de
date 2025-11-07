@@ -33,9 +33,9 @@ export default function Nav() {
   return (
     <>
       <div
-        className={`${styles["header-container"]} ${scrollTop ? "" : styles["header-container-scrolled"]}`}
+        className={`${styles.headerContainer} ${scrollTop ? "" : styles.headerContainerScrolled}`}
       >
-        <div className="center-container">
+        <div className="centerContainer">
           <header className={styles.header}>
             <Link href="/">
               <img src="/logo.jpg" alt="Improglycerin Logo" />

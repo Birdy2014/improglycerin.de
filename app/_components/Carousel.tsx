@@ -66,13 +66,13 @@ export default function Carousel(props: CarouselProps) {
   return (
     <div className={styles.carousel}>
       <a
-        className={[styles.button, styles["button-prev"]].join(" ")}
+        className={[styles.button, styles.buttonPrev].join(" ")}
         onClick={prevImage}
       >
         <FontAwesomeIcon icon={faAngleLeft} size="2xs" />
       </a>
       <a
-        className={[styles.button, styles["button-next"]].join(" ")}
+        className={[styles.button, styles.buttonNext].join(" ")}
         onClick={nextImage}
       >
         <FontAwesomeIcon icon={faAngleRight} size="2xs" />

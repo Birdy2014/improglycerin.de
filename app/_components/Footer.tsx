@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.line}></div>
-      <div className="center-container">
+      <div className="centerContainer">
         <div className={styles.center}>
           <div>
             Copyright 2025 – IMPROGLYCERIN Improvisationstheater aus Frankfurt

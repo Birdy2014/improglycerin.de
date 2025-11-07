@@ -1,4 +1,4 @@
-.header-container {
+.headerContainer {
   position: fixed;
   top: 0;
   background-color: white;
@@ -15,7 +15,7 @@
   }
 }
 
-.header-container-scrolled {
+.headerContainerScrolled {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
   --navbar-logo-height: 55px;
 }
