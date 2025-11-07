@@ -15,9 +15,17 @@ export default async function Shows() {
   const events = await fetchEvents("Auftritt");
   const testimonials = await fetchTestimonials("Auftritt", 5);
 
-  const dateFormat = Intl.DateTimeFormat("de-DE", {
+  const dateFormatDesktop = Intl.DateTimeFormat("de-DE", {
     weekday: "long",
     month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "Europe/Berlin",
+  });
+
+  const dateFormatMobile = Intl.DateTimeFormat("de-DE", {
+    weekday: "short",
+    month: "short",
     day: "numeric",
     year: "numeric",
     timeZone: "Europe/Berlin",
@@ -35,8 +43,13 @@ export default async function Shows() {
             <div className={styles.showLeft}>
               <div className={styles.showName}>{event.event_name}</div>
               <div className={styles.showInfos}>
-                <div>{dateFormat.format(new Date(event.event_datetime))}</div>
-                <div>{event.location_name}</div>
+                <div className={`${styles.showDate} ${styles.showDateDesktop}`}>
+                  {dateFormatDesktop.format(new Date(event.event_datetime))}
+                </div>
+                <div className={`${styles.showDate} ${styles.showDateMobile}`}>
+                  {dateFormatMobile.format(new Date(event.event_datetime))}
+                </div>
+                <div className={styles.showLocation}>{event.location_name}</div>
               </div>
             </div>
             <div className={styles.showRight}>

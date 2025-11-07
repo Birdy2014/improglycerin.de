@@ -46,6 +46,25 @@
   gap: 20px;
 }
 
+.showDate {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+
+.showDateDesktop {
+  display: none;
+}
+
+.showDateMobile {
+  display: block;
+}
+
+.showLocation {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
 /* This is copied from the Button component because nesting <a> tags is not
  * allowed, so Button can't be used. */
 .button {
@@ -81,6 +100,14 @@
 
   .showRight {
     align-items: flex-end;
+  }
+
+  .dateDesktop {
+    display: block;
+  }
+
+  .dateMobile {
+    display: none;
   }
 }
 
