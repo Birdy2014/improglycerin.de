@@ -9,6 +9,7 @@ import imageHaukeScheer from "@/public/ensemble-hauke-scheer.jpg";
 import imageElisaVogel from "@/public/ensemble-elisa-vogel.jpg";
 import imageSusanneKoenig from "@/public/ensemble-susanne-koenig.jpg";
 import imageJonathanStalmann from "@/public/ensemble-jonathan-stalmann.jpg";
+import imageLogo from "@/public/logo_schutzraum.png";
 
 export const metadata: Metadata = {
   title: "ENSEMBLE",
@@ -118,6 +119,12 @@ export default function Page() {
         Widersprechen wird sowieso niemand – Jonathan kann Taekwondo. Ansonsten
         lebt er in Frankfurt zum ersten Mal in seinem Leben nicht in einer WG.
       </ModalImage>
+
+      <div className={styles.placeholderLogo}>
+        <ModalImage title="" src={imageLogo}>
+          {""}
+        </ModalImage>
+      </div>
     </div>
   );
 }

@@ -8,10 +8,18 @@
   .grid {
     grid-template-columns: 1fr 1fr;
   }
+
+  .placeholderLogo {
+    display: none;
+  }
 }
 
 @media (width < 500px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .placeholderLogo {
+    display: none;
   }
 }
