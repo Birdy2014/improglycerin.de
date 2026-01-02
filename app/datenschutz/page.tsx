@@ -317,6 +317,23 @@ export default function Datenschutz() {
           verbessern, bleiben jedoch anonym und sind nicht personenbezogen.
         </p>
       </Vertical>
+
+      <Vertical>
+        <h2>Cloudflare Turnstile</h2>
+        <p>
+          Auf der Newsletter-Anmeldeseite verwenden wir den Dienst Turnstile,
+          betrieben von Cloudflare Inc. (101 Townsend St. San Francisco, CA
+          94107, USA). Dieser Dienst schützt unseren Newsletter vor
+          missbräuchlicher Verwendung. Hierzu analysiert Turnstile die IP
+          Adresse und den User-Agent Header des Nutzers. Die Nutzung des
+          Dienstes erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Weitere
+          Informationen finden sie auf der{" "}
+          <Link href="https://www.cloudflare.com/de-de/turnstile-privacy-policy/">
+            Datenschutzerklärung von Turnstile
+          </Link>
+          .
+        </p>
+      </Vertical>
     </div>
   );
 }

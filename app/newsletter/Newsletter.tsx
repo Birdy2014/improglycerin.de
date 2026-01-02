@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Script from "next/script";
 import styles from "./Newsletter.module.css";
 
 enum SubscriptionState {
@@ -9,6 +10,11 @@ enum SubscriptionState {
   ALREADY_SUBSCRIBED,
   ERROR,
 }
+
+const itfApi =
+  process.env.NODE_ENV === "development"
+    ? "http://localhost:8080/api"
+    : "https://improtheater-frankfurt.de/api";
 
 export default function Newsletter() {
   const [subscribed, setSubscribed] = useState(
@@ -19,9 +25,29 @@ export default function Newsletter() {
 
   const checkboxWorkshops = useRef<HTMLInputElement>(null);
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  const subscriptionForm = useRef<HTMLFormElement>(null);
+  const turnstileElement = useRef<HTMLDivElement>(null);
+  const turnstileWidgetId = useRef<any>(null);
+
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const data = new FormData(event.currentTarget);
+
+    const turnstile = (window as any).turnstile;
+
+    if (turnstileWidgetId.current !== null) {
+      turnstile.reset(turnstileWidgetId.current);
+      return;
+    }
+
+    turnstileWidgetId.current = turnstile.render(turnstileElement.current, {
+      sitekey: "0x4AAAAAACJq2P9fqQr716Sp",
+      theme: "light",
+      callback: sendSubscribe,
+    });
+  }
+
+  async function sendSubscribe(turnstileToken: string) {
+    const data = new FormData(subscriptionForm.current!);
     const workshops = data.get("checkboxWorkshops");
     const shows = data.get("checkboxShows");
     const email = data.get("email");
@@ -33,14 +59,16 @@ export default function Newsletter() {
     }
 
     try {
-      const response = await fetch(
-        "https://improtheater-frankfurt.de/api/newsletter/subscribe",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ email, name, subscribedTo }),
-        },
-      );
+      const response = await fetch(itfApi + "/newsletter/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          name,
+          subscribedTo,
+          cf_turnstile_response: turnstileToken,
+        }),
+      });
 
       if (response.status === 409) {
         setSubscribed(SubscriptionState.ALREADY_SUBSCRIBED);
@@ -75,6 +103,7 @@ export default function Newsletter() {
 
   return (
     <div className={styles.newsletter}>
+      <Script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit" />
       <div
         style={{
           display:
@@ -93,6 +122,7 @@ export default function Newsletter() {
 
         <form
           className={styles.form}
+          ref={subscriptionForm}
           onChange={checkValidity}
           onSubmit={handleSubmit}
         >
@@ -129,6 +159,8 @@ export default function Newsletter() {
             />
             <br />
           </div>
+
+          <div ref={turnstileElement} />
 
           <input
             type="submit"
