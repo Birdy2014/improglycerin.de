@@ -1,7 +1,14 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import styles from "./page.module.css";
 import { fetchEvents } from "@/app/_lib/yesticket";
 import Button from "@/app/_components/Button";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+  },
+};
 
 export default async function Page(props: PageProps<"/shows/[name]">) {
   const params = await props.params;
@@ -29,37 +36,8 @@ export default async function Page(props: PageProps<"/shows/[name]">) {
   const beginDate = new Date(event.event_datetime);
   const endDate = new Date(event.event_datetime_end);
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Event",
-    name: event.event_name,
-    startDate: event.event_datetime,
-    endDate: event.event_datetime_end,
-    image: event.event_picture_url,
-    description: event.event_description,
-    location: {
-      "@type": "Place",
-      name: event.location_name,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: event.location_street,
-        addressLocality: event.location_city,
-        addressRegion: event.location_state,
-        postalCode: event.location_zip,
-        addressCountry: event.location_country,
-      },
-    },
-    inLanguage: "de",
-  };
-
   return (
     <div className={styles.page}>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
-        }}
-      />
       <img className={styles.image} src={event.event_picture_url} />
       <div className={styles.main}>
         <h1>{event.event_name}</h1>
