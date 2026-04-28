@@ -2,8 +2,8 @@ export interface YesticketEvent {
   event_name: string;
   event_type: "Auftritt" | "Workshop";
   event_id: number;
-  event_datetime: string;
-  event_datetime_end: string;
+  event_datetime: Date;
+  event_datetime_end: Date;
   event_description: string;
   event_urlsafename: string;
   event_picture_url: string;
@@ -57,16 +57,19 @@ export async function fetchEvents(
     { cache: "force-cache", next: { revalidate: 3600 } },
   );
 
-  const events: YesticketEvent[] = await eventsRequest.json();
-  return events.map((event) => {
-    return {
-      ...event,
-      event_description: event.event_description.replaceAll(
-        /newsletter bestellen/gi,
-        "",
-      ),
-    };
-  });
+  const events = await eventsRequest.json();
+  return events.map(
+    (event: any) =>
+      <YesticketEvent>{
+        ...event,
+        event_datetime: new Date(event.event_datetime),
+        event_datetime_end: new Date(event.event_datetime_end),
+        event_description: event.event_description.replaceAll(
+          /newsletter bestellen/gi,
+          "",
+        ),
+      },
+  );
 }
 
 export async function fetchTestimonials(

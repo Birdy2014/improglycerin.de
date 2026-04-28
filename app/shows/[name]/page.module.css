@@ -17,7 +17,7 @@
   flex-direction: column;
 }
 
-.paragraph {
+.description > * {
   margin: 20px 0;
 }
 

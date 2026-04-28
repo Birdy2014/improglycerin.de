@@ -44,10 +44,10 @@ export default async function Shows() {
               <div className={styles.showName}>{event.event_name}</div>
               <div className={styles.showInfos}>
                 <div className={`${styles.showDate} ${styles.showDateDesktop}`}>
-                  {dateFormatDesktop.format(new Date(event.event_datetime))}
+                  {dateFormatDesktop.format(event.event_datetime)}
                 </div>
                 <div className={`${styles.showDate} ${styles.showDateMobile}`}>
-                  {dateFormatMobile.format(new Date(event.event_datetime))}
+                  {dateFormatMobile.format(event.event_datetime)}
                 </div>
                 <div className={styles.showLocation}>{event.location_name}</div>
               </div>
