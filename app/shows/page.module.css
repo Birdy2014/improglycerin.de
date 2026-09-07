@@ -67,24 +67,6 @@
   overflow: hidden;
 }
 
-/* This is copied from the Button component because nesting <a> tags is not
- * allowed, so Button can't be used. */
-.button {
-  display: block;
-  width: fit-content;
-  height: fit-content;
-  padding: 13px 29px;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 17px;
-  background-color: #cb092a;
-  color: white;
-
-  &:hover {
-    background-color: #3a0300;
-  }
-}
-
 .testimonials {
   column-gap: 100px;
 

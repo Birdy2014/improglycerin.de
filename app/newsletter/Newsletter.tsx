@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import Script from "next/script";
 import styles from "./Newsletter.module.css";
+import Button from "../_components/Button";
 
 enum SubscriptionState {
   NOT_SUBSCRIBED,
@@ -162,11 +163,7 @@ export default function Newsletter() {
 
           <div ref={turnstileElement} />
 
-          <input
-            type="submit"
-            className={styles.subscribeButton}
-            value="ANMELDEN"
-          />
+          <Button type="submit">ANMELDEN</Button>
         </form>
       </div>
 

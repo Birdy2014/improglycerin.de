@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from "./page.module.css";
 import { fetchEvents, fetchTestimonials } from "../_lib/yesticket";
 import Testimonial from "../_components/Testimonial";
+import Button from "../_components/Button";
 
 export const metadata: Metadata = {
   title: "SHOWS",
@@ -53,7 +54,7 @@ export default async function Shows() {
               </div>
             </div>
             <div className={styles.showRight}>
-              <div className={styles.button}>Mehr Infos</div>
+              <Button>Mehr Infos</Button>
               <div className={`${styles.showInfos} ${styles.showUrgency}`}>
                 <div>{event.event_urgency_string}</div>
               </div>
