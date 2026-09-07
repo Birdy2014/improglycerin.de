@@ -110,9 +110,9 @@ export default function Newsletter() {
             subscribed === SubscriptionState.NOT_SUBSCRIBED ? "block" : "none",
         }}
       >
-        <h1>
+        <h2>
           Improglycerin Newsletter bestellen und immer gut informiert sein!
-        </h1>
+        </h2>
         <p>
           Hier könnt ihr zwei Newsletter bestellen. Der eine Newsletter kommt
           wöchentlich von Improtheater Frankfurt und enthält die Einladungen für
@@ -176,7 +176,7 @@ export default function Newsletter() {
             subscribed === SubscriptionState.SUBSCRIBED ? "block" : "none",
         }}
       >
-        <h1>Vielen Dank für Deine Newsletter-Anmeldung</h1>
+        <h2>Vielen Dank für Deine Newsletter-Anmeldung</h2>
         <p>
           Du erhältst gleich eine E-Mail von uns. Bitte bestätige die Anmeldung
           durch einfaches Klicken des Bestätigungslinks in dieser E-Mail. Erst
@@ -193,7 +193,7 @@ export default function Newsletter() {
               : "none",
         }}
       >
-        <h1>Die Newsletter-Anmeldung war nicht erfolgreich</h1>
+        <h2>Die Newsletter-Anmeldung war nicht erfolgreich</h2>
         <p>
           Entweder bist du schon angemeldet oder du hast den Link in der
           Bestätigungsmail noch nicht angeklickt.
@@ -211,7 +211,7 @@ export default function Newsletter() {
           display: subscribed === SubscriptionState.ERROR ? "block" : "none",
         }}
       >
-        <h1>Die Newsletter-Anmeldung war nicht erfolgreich</h1>
+        <h2>Die Newsletter-Anmeldung war nicht erfolgreich</h2>
 
         <p>Es ist ein unbekannter Fehler aufgetreten.</p>
       </div>

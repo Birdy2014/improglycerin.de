@@ -10,8 +10,6 @@ export const metadata: Metadata = {
 export default function Datenschutz() {
   return (
     <div className={styles.page}>
-      <h1>DATENSCHUTZ</h1>
-
       <Vertical>
         <h2>Datenschutzerklärung</h2>
         <p>
