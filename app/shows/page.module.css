@@ -7,7 +7,7 @@
 .shows {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  padding-top: 30px;
 }
 
 .show {
@@ -15,9 +15,11 @@
   flex-direction: column;
   color: black;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding: 30px 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  height: 160px;
+  box-sizing: content-box;
+  height: 120px;
+  font-size: 24px;
 }
 
 .showName {
@@ -92,9 +94,15 @@
   }
 }
 
+@media (width < 800px) {
+  .showUrgency {
+    display: none;
+  }
+}
+
 @media (width > 800px) {
   .show {
-    height: 84px;
+    height: 64px;
     flex-direction: row;
   }
 
