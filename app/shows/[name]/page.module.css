@@ -17,8 +17,14 @@
   flex-direction: column;
 }
 
-.description > * {
-  margin: 20px 0;
+.description {
+  & > * {
+    margin: 20px 0;
+  }
+
+  & ul, & ol {
+    padding-left: 2em;
+  }
 }
 
 .sidebar {
