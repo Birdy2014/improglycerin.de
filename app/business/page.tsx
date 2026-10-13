@@ -107,22 +107,20 @@ export default function Business() {
           Einige unserer Kunden und Partner:
         </h2>
         <ul className={styles.customerList}>
+          <li>Alte Leipziger Lebensversicherung a.G.</li>
+          <li>DB Netz AG</li>
+          <li>DECHEMA e.V.</li>
+          <li>Deloitte GmbH</li>
+          <li>Design Thinking Barcamp Darmstadt</li>
           <li>Deutsche Herzstiftung e.V.</li>
           <li>Deutsche Post DHL Group</li>
-          <li>DB Netz AG</li>
-          <li>Studienstiftung des Deutschen Volkes</li>
-          <li>Baden-Badener Unternehmer Gespräche, Gruppe 42</li>
-          <li>Väter PAL gGmbH</li>
-          <li>Design Thinking Barcamp Darmstadt</li>
-          <li>Kulturgemeinde Kelkheim e.V.</li>
-          <li>Vitos Rheingau – Kinder/Jugendpsychiatrie</li>
-          <li>Kulturamt/Stadt Bruchköbel</li>
+          <li>DGQ – Deutsche Gesellschaft für Qualität</li>
+          <li>Greenfort Rechtsanwälte</li>
+          <li>Helvetia Versicherungen</li>
+          <li>ifb – Institut zur Fortbildung von Betriebsräten</li>
           <li>Querbeet Bio-Frischvermarktung GmbH</li>
-          <li>Ostbayerische Technische Hochschule Regensburg</li>
-          <li>Nachbarschaftshilfe Griesheim</li>
-          <li>Kulturkirche St. Peter</li>
-          <li>Meilor Bondoc Comedy</li>
-          <li>Weinbar Felsenkeller am Zauberberg</li>
+          <li>Studienstiftung des deutschen Volkes</li>
+          <li>Vitos Rheingau – Kinder- und Jugendpsychiatrie</li>
         </ul>
       </div>
 
