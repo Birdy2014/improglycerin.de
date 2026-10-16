@@ -1,8 +1,9 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./ModalImage.module.css";
+import { useRouter } from "next/navigation";
 
 interface ModalImageProps {
   children: React.ReactNode;
@@ -12,16 +13,50 @@ interface ModalImageProps {
 
 export default function ModalImage(props: ModalImageProps) {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
+  const uriFragment = `#${encodeURIComponent(props.title.toLowerCase().replace(/\s+/g, "-"))}`;
+  const router = useRouter();
+  const openedByClick = useRef(false);
+
+  useEffect(() => {
+    const openModalIfNeeded = (hash: string) => {
+      if (!dialogRef.current) {
+        return;
+      }
+
+      if (hash === uriFragment) {
+        dialogRef.current.showModal();
+      } else {
+        dialogRef.current.close();
+      }
+    };
+
+    const handleNavigate = (event: NavigateEvent) => {
+      const url = new URL(event.destination.url);
+
+      openModalIfNeeded(url.hash);
+    };
+
+    openModalIfNeeded(window.location.hash);
+
+    window.navigation.addEventListener("navigate", handleNavigate);
+    return () =>
+      window.navigation.removeEventListener("navigate", handleNavigate);
+  }, []);
 
   function openModal() {
-    if (dialogRef.current) {
-      dialogRef.current.showModal();
+    if (props.title.length > 0) {
+      openedByClick.current = true;
+      router.push(uriFragment);
     }
   }
 
-  function closeModal() {
-    if (dialogRef.current) {
-      dialogRef.current.close();
+  function closeModal(event: React.MouseEvent<HTMLDialogElement>) {
+    dialogRef.current?.close();
+    if (openedByClick.current) {
+      openedByClick.current = false;
+      router.back();
+    } else {
+      router.push(window.location.href.split("#")[0]);
     }
   }
 
