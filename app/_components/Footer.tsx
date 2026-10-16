@@ -9,10 +9,7 @@ export default function Footer() {
       <div className={styles.line}></div>
       <div className="centerContainer">
         <div className={styles.center}>
-          <div>
-            Copyright 2026 – IMPROGLYCERIN Improvisationstheater in Frankfurt am
-            Main e.V.
-          </div>
+          <div>Copyright 2026 – Improglycerin e.V.</div>
           <div className={styles.links}>
             <Link href="/datenschutz">DATENSCHUTZ</Link>
             <span>│</span>

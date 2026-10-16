@@ -11,7 +11,7 @@ export default function Impressum() {
   return (
     <div className={styles.page}>
       <Vertical>
-        <h2>Improglycerin – Improvisationstheater in Frankfurt e.V.</h2>
+        <h2>Improglycerin e.V.</h2>
         <p>
           c/o Elisa Vogel
           <br />
